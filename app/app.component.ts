@@ -32,4 +32,8 @@ export class AppComponent {
       return "bg-success";
     }
   }
+
+  remove(ingredient) {
+    INGREDIENTS.splice(INGREDIENTS.indexOf(ingredient),1);
+  }
 }

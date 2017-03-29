@@ -1,5 +1,5 @@
 import { Ingredient } from './ingredient';
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { INGREDIENTS } from './all-ingredients';
 
 @Component({
@@ -9,7 +9,9 @@ import { INGREDIENTS } from './all-ingredients';
 
 export class editIngredientComponent{
   @Input() ingredient: Ingredient;
-  remove(ingredient) {
-    INGREDIENTS.splice(INGREDIENTS.indexOf(ingredient),1);
+  @Output() removeSend = new EventEmitter();
+  remove(ingredient)
+  {
+    this.removeSend.emit(ingredient);
   }
 }

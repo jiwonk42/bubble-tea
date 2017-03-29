@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Tea } from './tea';
 import { TEAS } from './all-teas';
+import { Ingredient } from './ingredient';
+import { INGREDIENTS } from './all-ingredients';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +11,5 @@ import { TEAS } from './all-teas';
 
 export class AppComponent {
   teas = TEAS;
+  ingredients = INGREDIENTS;
 }

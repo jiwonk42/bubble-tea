@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { AppComponent }   from './app.component';
 import { editTeaComponent } from './edit-tea';
+import { editIngredientComponent } from './edit-ingredient';
 
 @NgModule({
   imports: [
@@ -10,7 +11,9 @@ import { editTeaComponent } from './edit-tea';
   FormsModule],
   declarations: [
   AppComponent,
-  editTeaComponent],
+  editTeaComponent,
+  editIngredientComponent
+  ],
   bootstrap:    [ AppComponent ]
 })
 

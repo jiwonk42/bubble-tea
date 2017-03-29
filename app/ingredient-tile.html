@@ -1,0 +1,10 @@
+<h3>Ingredients</h3>
+<ul>
+  <li [class]="amountColor(currentIngredient)" *ngFor="let currentIngredient of ingredients">Ingredient(s): {{currentIngredient.name}}; Quantity: {{currentIngredient.quantity}}
+  <button (click)="currentIngredient.editForm = !currentIngredient.editForm" class="btn btn-info">{{currentIngredient.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>
+  <div *ngIf="currentIngredient.editForm" class="well">
+    <edit-ingredient [ingredient] = "currentIngredient" (removeSend) = "removeIngredient($event)"></edit-ingredient>
+    <button (click)="currentIngredient.editForm = !currentIngredient.editForm" class="btn btn-default">Done Editing</button>
+  </div>
+  </li>
+</ul>

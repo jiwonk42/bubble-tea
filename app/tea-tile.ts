@@ -8,7 +8,7 @@ import { TEAS } from './all-teas';
 })
 
 export class TeaTileComponent{
-  @Input() teas: teas;
+  @Input() teas: Tea[];
   @Output() removeSend = new EventEmitter();
   removeTea(tea)
   {

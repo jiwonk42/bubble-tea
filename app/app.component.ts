@@ -13,16 +13,6 @@ export class AppComponent {
   teas = TEAS;
   ingredients = INGREDIENTS;
 
-  amountColor(ingredient){
-    if (ingredient.quantity < 5){
-      return "bg-warning";
-    } else if (ingredient.quantity < 10){
-      return "bg-info";
-    } else {
-      return "bg-success";
-    }
-  }
-
   removeIngredient(ingredient) {
     INGREDIENTS.splice(INGREDIENTS.indexOf(ingredient),1);
   }

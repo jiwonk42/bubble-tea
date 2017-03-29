@@ -1,5 +1,5 @@
 import { Tea } from './tea';
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TEAS } from './all-teas';
 
 @Component({
@@ -9,7 +9,9 @@ import { TEAS } from './all-teas';
 
 export class editTeaComponent{
   @Input() tea: Tea;
-  remove(tea) {
-    TEAS.splice(TEAS.indexOf(tea),1);
+  @Output() removeSend = new EventEmitter();
+  removeTea(tea)
+  {
+    this.removeSend.emit(tea);
   }
 }

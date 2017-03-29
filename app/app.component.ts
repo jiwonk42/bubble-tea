@@ -36,4 +36,8 @@ export class AppComponent {
   removeIngredient(ingredient) {
     INGREDIENTS.splice(INGREDIENTS.indexOf(ingredient),1);
   }
+
+  removeTea(tea) {
+    TEAS.splice(TEAS.indexOf(tea),1);
+  }
 }

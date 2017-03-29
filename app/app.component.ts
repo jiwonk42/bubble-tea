@@ -22,4 +22,14 @@ export class AppComponent {
       return "bg-success";
     }
   }
+
+  amountColor(ingredient){
+    if (ingredient.quantity < 5){
+      return "bg-warning";
+    } else if (ingredient.quantity < 10){
+      return "bg-info";
+    } else {
+      return "bg-success";
+    }
+  }
 }

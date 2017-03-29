@@ -44,4 +44,8 @@ export class AppComponent {
   submitNewTea(tea){
     TEAS.push(tea);
   }
+
+  submitNewIngredient(ingredient){
+    INGREDIENTS.push(ingredient);
+  }
 }

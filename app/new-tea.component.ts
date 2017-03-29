@@ -10,7 +10,7 @@ export class newTeaComponent {
   @Output() submitNewTeaSend = new EventEmitter();
 
   submitNewTea(name: string, flavor: string, remaining: number, price: number) {
-    var newTea: Tea = new Tea(name, flavor, remaining, price);
+    var newTea = new Tea(name, flavor, remaining, price);
     this.submitNewTeaSend.emit(newTea);
   }
 }

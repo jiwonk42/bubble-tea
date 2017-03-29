@@ -13,16 +13,6 @@ export class AppComponent {
   teas = TEAS;
   ingredients = INGREDIENTS;
 
-  priceColor(tea) {
-    if (tea.price < 4) {
-      return "bg-danger";
-    } else if (tea.price < 7) {
-      return "bg-warning";
-    } else {
-      return "bg-success";
-    }
-  }
-
   amountColor(ingredient){
     if (ingredient.quantity < 5){
       return "bg-warning";

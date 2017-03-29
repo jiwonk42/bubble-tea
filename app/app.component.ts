@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { Tea } from './tea';
+import { TEAS } from './all-teas';
 
 @Component({
   selector: 'app-root',
-  template: `
-  <h1>My Bubble Tea App</h1>
-  `
+  templateUrl: './app/app.component.html'
 })
 
 export class AppComponent {
-
+  teas = TEAS;
 }

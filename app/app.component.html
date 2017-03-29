@@ -11,7 +11,7 @@
     </li>
   </ul>
   <new-tea (submitNewTeaSend) = "submitNewTea($event)"></new-tea>
-
+  <new-ingredient (submitNewIngredientSend) = "submitNewIngredient($event)"></new-ingredient>
   <h3>Ingredients</h3>
   <ul>
     <li [class]="amountColor(currentIngredient)" *ngFor="let currentIngredient of ingredients">Ingredient(s): {{currentIngredient.name}}; Quantity: {{currentIngredient.quantity}}
@@ -22,5 +22,5 @@
     </div>
     </li>
   </ul>
-  <new-ingredient (submitNewIngredientSend) = "submitNewIngredient($event)"></new-ingredient>
+
   </div>

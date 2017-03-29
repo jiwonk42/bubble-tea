@@ -1,12 +1,20 @@
-<h2>Add new tea</h2>
-<div class="form-group">
-  <label>Name:</label>
-  <input type="text" #newTeaName>
-  <label>Flavor:</label>
-  <input type="text" #newTeaFlavor>
-  <label>Remaining:</label>
-  <input type="number" #newTeaRemain>
-  <label>Price</label>
-  <input type="number" #newTeaPrice>
-  <button (click)="submitNewTea(newTeaName.value, newTeaFlavor.value, newTeaRemain.value, newTeaPrice.value)" class="btn btn-info">Add new tea</button>
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-success">
+      <div class="panel-heading">Add new tea</div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" #newTeaName class="form-control">
+          <label>Flavor:</label>
+          <input type="text" #newTeaFlavor class="form-control">
+          <label>Remaining:</label>
+          <input type="number" #newTeaRemain class="form-control">
+          <label>Price</label>
+          <input type="number" #newTeaPrice class="form-control">
+        </div>
+        <button (click)="submitNewTea(newTeaName.value, newTeaFlavor.value, newTeaRemain.value, newTeaPrice.value)" class="btn btn-info">Add new tea</button>
+      </div>
+  </div>
+  </div>
 </div>

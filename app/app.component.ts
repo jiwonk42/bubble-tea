@@ -33,7 +33,7 @@ export class AppComponent {
     }
   }
 
-  remove(ingredient) {
+  removeIngredient(ingredient) {
     INGREDIENTS.splice(INGREDIENTS.indexOf(ingredient),1);
   }
 }

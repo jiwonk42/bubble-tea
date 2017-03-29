@@ -10,7 +10,7 @@ import { INGREDIENTS } from './all-ingredients';
 export class editIngredientComponent{
   @Input() ingredient: Ingredient;
   @Output() removeSend = new EventEmitter();
-  remove(ingredient)
+  removeIngredient(ingredient)
   {
     this.removeSend.emit(ingredient);
   }

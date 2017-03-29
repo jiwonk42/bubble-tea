@@ -5,7 +5,7 @@
     <li [class]="priceColor(currentTea)" *ngFor="let currentTea of teas">{{currentTea.name}}: {{currentTea.flavor}} {{currentTea.remaining}} (cups left) ${{currentTea.price}};
     <button (click)="currentTea.editForm = !currentTea.editForm" class="btn btn-info">{{currentTea.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>
     <div *ngIf="currentTea.editForm" class="well">
-      <edit-tea [tea] = "currentTea"></edit-tea>
+      <edit-tea [tea] = "currentTea" (removeSend) = "remove($event)">></edit-tea>
        <button (click)="currentTea.editForm = !currentTea.editForm" class="btn btn-default">Done Editing</button>
     </div>
     </li>
@@ -16,7 +16,7 @@
     <li [class]="amountColor(currentIngredient)" *ngFor="let currentIngredient of ingredients">Ingredient(s): {{currentIngredient.name}}; Quantity: {{currentIngredient.quantity}}
     <button (click)="currentIngredient.editForm = !currentIngredient.editForm" class="btn btn-info">{{currentIngredient.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>
     <div *ngIf="currentIngredient.editForm" class="well">
-      <edit-ingredient [ingredient] = "currentIngredient" (removeSend) = "remove($event)"></edit-ingredient>
+      <edit-ingredient [ingredient] = "currentIngredient" (removeSend) = "removeIngredient($event)"></edit-ingredient>
       <button (click)="currentIngredient.editForm = !currentIngredient.editForm" class="btn btn-default">Done Editing</button>
     </div>
     </li>

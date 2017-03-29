@@ -40,4 +40,8 @@ export class AppComponent {
   removeTea(tea) {
     TEAS.splice(TEAS.indexOf(tea),1);
   }
+
+  submitNewTea(tea){
+    TEAS.push(tea);
+  }
 }

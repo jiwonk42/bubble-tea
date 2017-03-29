@@ -1,5 +1,6 @@
 import { Ingredient } from './ingredient';
 import { Component, Input } from '@angular/core';
+import { INGREDIENTS } from './all-ingredients';
 
 @Component({
   selector: 'edit-ingredient',
@@ -8,4 +9,7 @@ import { Component, Input } from '@angular/core';
 
 export class editIngredientComponent{
   @Input() ingredient: Ingredient;
+  remove(ingredient) {
+    INGREDIENTS.splice(INGREDIENTS.indexOf(ingredient),1);
+  }
 }

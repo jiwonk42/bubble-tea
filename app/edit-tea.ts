@@ -10,6 +10,6 @@ import { TEAS } from './all-teas';
 export class editTeaComponent{
   @Input() tea: Tea;
   remove(tea) {
-  TEAS.splice(TEAS.indexOf(tea),1);
-}
+    TEAS.splice(TEAS.indexOf(tea),1);
+  }
 }

@@ -16,7 +16,7 @@ export class TeaTileComponent{
   }
   sellTea(tea)
   {
-    if(tea.remaining > 0)
+    if(tea.remaining > 0 )
     {tea.remaining -=1;}
   }
   priceColor(tea) {

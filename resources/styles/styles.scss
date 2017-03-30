@@ -1,9 +1,10 @@
 .runout {
-  color:rgba(0, 0, 0, 0);
+  display: none;
 }
 
 .showRunOut{
   .runout{
+    display: unset;
     color:red;
   }
 }

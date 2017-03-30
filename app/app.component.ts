@@ -3,6 +3,7 @@ import { Tea } from './tea';
 import { TEAS } from './all-teas';
 import { Ingredient } from './ingredient';
 import { INGREDIENTS } from './all-ingredients';
+declare var $:any;
 
 @Component({
   selector: 'app-root',
@@ -29,4 +30,10 @@ export class AppComponent {
     INGREDIENTS.push(ingredient);
   }
 
+  customerView(){
+    $(".owner").toggle();
+    $("#toggle").text(function(i, text){
+          return text === "Toggle Customer View" ? "Toggle Owner View" : "Toggle Customer View";
+      })
+  }
 }

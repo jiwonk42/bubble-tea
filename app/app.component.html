@@ -1,12 +1,14 @@
 <div class="container">
   <h1>My Bubble Tea App</h1>
+  <button (click)="customerView()" class="btn btn-primary" id="toggle">Toggle Customer View</button>
   <tea-tile [teas] = "teas" (removeSend) = "removeTea($event)"></tea-tile>
 
-  <div class="row">
+  <div class="row owner">
     <new-tea (submitNewTeaSend) = "submitNewTea($event)"></new-tea>
     <new-ingredient (submitNewIngredientSend) = "submitNewIngredient($event)"></new-ingredient>
   </div>
-
-  <ingredient-tile [ingredients] = "ingredients" (removeSend) = "removeIngredient($event)"></ingredient-tile>
+  <div class="owner">
+    <ingredient-tile [ingredients] = "ingredients" (removeSend) = "removeIngredient($event)"></ingredient-tile>
+  </div>
 
   </div>

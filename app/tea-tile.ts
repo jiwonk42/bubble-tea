@@ -16,7 +16,8 @@ export class TeaTileComponent{
   }
   sellTea(tea)
   {
-    tea.remaining -=1;
+    if(tea.remaining > 0)
+    {tea.remaining -=1;}
   }
   priceColor(tea) {
     if (tea.price < 4) {
@@ -33,10 +34,10 @@ export class TeaTileComponent{
       return "bg-info";
     } else if (tea.remaining > 5) {
       return "bg-success";
-    } else if (tea.remaining > 1) {
+    } else if (tea.remaining >= 1) {
       return "bg-warning";
     } else {
-      return "bg-danger";
+      return "bg-danger showRunOut";
     }
   }
 }

@@ -1,11 +1,11 @@
 <h3>Ingredients</h3>
-<select (change)="onChange($event.target.value)">
+<select (change)="onChange($event.target.value)" class="form-control">
     <option value="all-ingredients-list" selected="selected">All Ingredients</option>
      <option value="liquid-ingredient">Liquid Ingredients</option>
      <option value="fruit-ingredient">Fruit Ingredients</option>
      <option value="others">Others</option>
 </select>
-
+  <br>
 <ul>
   <li [class]="amountColor(currentIngredient)" *ngFor="let currentIngredient of ingredients | ingredienttype: filterByIngredientType">Ingredient(s): {{currentIngredient.name}}; Category: {{currentIngredient.category}}; Quantity: {{currentIngredient.quantity}}
   <button (click)="currentIngredient.editForm = !currentIngredient.editForm" class="btn btn-info">{{currentIngredient.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>

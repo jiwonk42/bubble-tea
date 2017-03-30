@@ -23,4 +23,10 @@ export class IngredientTileComponent{
       return "bg-success";
     }
   }
+
+  filterByIngredientType: string = "all-ingredients";
+
+  onChange(optionFromMenu){
+    this.filterByIngredientType = optionFromMenu;
+  }
 }

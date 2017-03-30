@@ -9,6 +9,7 @@ import { editIngredientComponent } from './edit-ingredient';
 import { newTeaComponent } from './new-tea.component';
 import { newIngredientComponent } from './new-ingredient.component';
 import { TeaTypePipe } from './teatype.pipe';
+import { IngredientTypePipe } from './ingredienttype.pipe';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { TeaTypePipe } from './teatype.pipe';
   editIngredientComponent,
   newTeaComponent,
   newIngredientComponent,
-  TeaTypePipe
+  TeaTypePipe,
+  IngredientTypePipe
   ],
   bootstrap:    [ AppComponent ]
 })

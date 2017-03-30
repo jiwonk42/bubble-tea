@@ -1,5 +1,7 @@
 <label>Name:</label>
 <input type="text" [(ngModel)]="ingredient.name" placeholder="name">
+<label>Category:</label>
+<input type="text" [(ngModel)]="ingredient.category" placeholder="category">
 <label>Quantity:</label>
 <input type="text" [(ngModel)]="ingredient.quantity" placeholder="quantity">
 <button (click)="removeIngredient(ingredient)" class="btn btn-danger">Delete this ingredient from inventory</button>

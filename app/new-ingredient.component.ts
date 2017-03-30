@@ -9,8 +9,8 @@ import { Ingredient } from './ingredient';
 export class newIngredientComponent {
   @Output() submitNewIngredientSend = new EventEmitter();
 
-  submitNewIngredient(name: string, quantity: number) {
-    var newIngredient = new Ingredient(name, quantity);
+  submitNewIngredient(name: string, category: string, quantity: number) {
+    var newIngredient = new Ingredient(name, category, quantity);
     this.submitNewIngredientSend.emit(newIngredient);
   }
 }

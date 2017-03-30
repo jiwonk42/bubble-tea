@@ -9,9 +9,7 @@ import { Tea } from './tea';
 export class TeaTypePipe implements PipeTransform{
   transform(input: Tea[], typeOfTea){
     var output: Tea[] = [];
-    if (typeOfTea === "all-teas-list") {
-      return input;
-    } else if (typeOfTea === "milk-tea"){
+    if (typeOfTea === "milk-tea"){
       for (let i = 0; i < input.length; i++) {
         if( (input[i].name).includes('milk tea'))
         {
@@ -21,7 +19,6 @@ export class TeaTypePipe implements PipeTransform{
       return output;
     }
     else if (typeOfTea === "fruit-tea"){
-      if (typeOfTea === "fruit-tea"){
         for (let i = 0; i < input.length; i++) {
           if( (input[i].name).includes('fruit tea'))
           {
@@ -29,8 +26,7 @@ export class TeaTypePipe implements PipeTransform{
           }
         }
         return output;
-    }
-  } else if (typeOfTea === "others"){
+    } else if (typeOfTea === "others"){
     for (let i = 0; i < input.length; i++) {
       if(! (input[i].name.includes('fruit tea') || input[i].name.includes('milk tea') ))
       {

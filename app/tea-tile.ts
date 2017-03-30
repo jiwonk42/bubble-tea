@@ -27,4 +27,16 @@ export class TeaTileComponent{
       return "bg-success";
     }
   }
+
+  quantityColor(tea) {
+    if (tea.remaining > 10) {
+      return "bg-info";
+    } else if (tea.remaining > 5) {
+      return "bg-success";
+    } else if (tea.remaining > 1) {
+      return "bg-warning";
+    } else {
+      return "bg-danger";
+    }
+  }
 }

@@ -1,6 +1,13 @@
 <h3>Teas</h3>
+<select (change)="onChange($event.target.value)">
+    <option value="all-teas-list" selected="selected">All Teas</option>
+     <option value="milk-tea">Milk Teas</option>
+     <option value="fruit-tea">Fruit Teas</option>
+     <option value="others">Others</option>
+</select>
+
 <ul>
-  <li [class]="priceColor(currentTea)" [class]="quantityColor(currentTea)" *ngFor="let currentTea of teas">{{currentTea.name}}: {{currentTea.flavor}} {{currentTea.remaining}} (cups left) ${{currentTea.price}};
+  <li [class]="priceColor(currentTea)" [class]="quantityColor(currentTea)" *ngFor="let currentTea of teas | teatype: filterByTeaType">{{currentTea.name}}: {{currentTea.flavor}} {{currentTea.remaining}} (cups left) ${{currentTea.price}};
   <span class="runout">Runout</span>
   <button (click)="sellTea(currentTea)" class="btn btn-warning owner">Sell!</button>
   <button (click)="currentTea.editForm = !currentTea.editForm" class="btn btn-info owner">{{currentTea.editForm ? 'Hide Edit Form' : 'Show Edit Form'}}</button>

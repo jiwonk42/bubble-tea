@@ -40,4 +40,10 @@ export class TeaTileComponent{
       return "bg-danger showRunOut";
     }
   }
+
+  filterByTeaType: string = "all-teas";
+
+  onChange(optionFromMenu){
+    this.filterByTeaType = optionFromMenu;
+  }
 }

@@ -28,4 +28,5 @@ export class AppComponent {
   submitNewIngredient(ingredient){
     INGREDIENTS.push(ingredient);
   }
+
 }

@@ -14,6 +14,10 @@ export class TeaTileComponent{
   {
     this.removeSend.emit(tea);
   }
+  sellTea(tea)
+  {
+    tea.remaining -=1;
+  }
   priceColor(tea) {
     if (tea.price < 4) {
       return "bg-danger";
